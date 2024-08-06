@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Shadows+Into+Light&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+:root{
+    --Fondo: url("./img/fondo\ Claro\ compu.jpeg");
+    --header: #a7c8e3c9;
+    --boton: #9ad2ff;
+    --hover: #6ca2ce;
+}
+.oscuro{
+    --Fondo: url("./img/Fondo\ Oscuro\ Compu.jpg");
+    --header: #2e3e2ed3;
+    --color: #ffff;
+    --boton: #658363;
+    --hover: #4a7047;
+}
+
+body{
+    height: 100vh;
+    background: var(--Fondo)no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*Barra de navegacion*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header);
+    padding: 10px;
+}
+header img{
+    width: 80px;
+    height: 80px;
+}
+
+
+/*Botones*/
+nav ul{ 
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#menu{
+    display: none;
+}
+
+.btn:hover{
+    transition: 0.5s;
+    font-size: 25px;
+    border-bottom: 5px solid var(--boton);
+}
+
+nav button{
+    background-color: transparent;
+    color: var(--color);
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Modo claro/oscuro*/
+
+nav select{
+    background-color: var(--boton);
+    border-radius: 10px;
+    border: 0;
+}
+.ImgNav{
+    width: 30px;
+    height: 30px;
+}
+
+/*Vistas*/
+
+main{
+    min-height: 70%;
+   display: flex;
+   justify-content: center  ;
+   align-items: center;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.Vista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    color: var(--color);
+    background-color: var(--header);
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    -webkit-animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+}
+
+.Vista:hover, .Vista:focus{
+    transition: 0.5s;
+    transform: translateY(-10px);
+}
+
+#title{
+    font-weight: bold;
+}
+
+input{
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+    width: 80%;
+}
+.Vista input:hover, .Vista input:focus{
+    transition: 0.5s;
+    transform: scale(1.1);
+
+}
+.Vista button{
+    background-color: var(--boton);
+    border: 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.Vista button:hover{
+    background-color: var(--hover);
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 721px){
+    header{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 633px){
+    header{
+        flex-direction: row;
+
+    }
+    
+    #menu, #Modo{
+        display: flex;
+        height: 50px;
+        font-size: 20px;
+        background: var(--header);
+        color: var(--color);
+    }
+    
+    li:has(.btn) {
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    #menu, #Modo{
+        display: flex;
+        height: 30px;
+        font-size: 20px;
+        background: var(--header);
+        color: var(--color);
+    }
+    
+    header{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+ @-webkit-keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+  }
+  @keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+  }
+  

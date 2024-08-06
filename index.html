@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Style/img/head icon.png">
+    <link rel="stylesheet" href="./Style/style.css">
+    <title>Math Ejercise</title>
+</head>
+<body>
+    <header>
+        <img src="./Style/img/logo.png" alt="Logic Icon">
+        <nav>
+            <ul>
+                <li><button data-filter="all" class="btn active" >Todos</button></li>
+                <li><button data-filter="Fac" class="btn Fac">Factorial</button></li>
+                <li><button data-filter="mayorArray"  class="btn mayorArray">Numero Mayor</button></li>
+                <li><button data-filter="ordenar" class="btn ordenar">Ordenar</button></li>
+                <li><button data-filter="filtrar" class="btn filtrar">Filtrar</button></li>
+                <li><button data-filter="sumar" class="btn sumar">sumar</button></li>
+                <li>
+                    <select id="menu">
+                        <option value="all">Todos</option>
+                        <option value="Fac">Factorial</option>
+                        <option value="mayorArray">Mayor de un conjunto</option>
+                        <option value="ordenar">Ordenar</option>
+                        <option value="filtrar">Filtrar</option>
+                        <option value="sumar">Sumar</option>
+                    </select>        
+                </li>
+                <li><select id="Modo">
+                    <option value="Claro">☀️</option>
+                    <option value="Oscuro">🌑</option>
+                </select></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+         
+       <section>
+
+        <div class="Vista Fac">
+            
+            <label id="title" for="Nombre">Factorial de: </label>
+            <p >Sacar el factorial de algun numero:</p>
+            <input type="number" id="Factorial" placeholder="Ingresa un numero...">
+            <button class="Vistabtn" id="FactResult">Calcular...</button>
+            <p id="resultFact"></p>
+
+        </div>
+
+        <div class="Vista mayorArray">
+    
+            <label id="title" for="Nombre">Mayor de un conjunto de numeros: </label>
+            <p >Ingresa un conjunto de numeros para saber cual es el mayor de todos</p>
+            <input type="text" id="NumMayorArray" placeholder="Ingresa un conjunto de numeros...">
+            <button class="Vistabtn" id="MayorArrayResult">Calcular...</button>
+            <p id="MaxResultArray"></p>
+            
+        </div>
+
+        <div class="Vista ordenar">
+                
+            <label id="title" for="Nombre"> Ordena los numeros: </label>
+            <p >Ingresa un conjunto de numeros en desorden para ordenarlos de menor a mayor</p>
+            <input type="text" id="OrdenaArray" placeholder="Ingresa numeros al azar...">
+            <button class="Vistabtn" id="OrdenarButton">Calcular...</button>
+            <p id="OrdenResult"></p>
+            
+        </div>
+
+        <div class="Vista filtrar">
+                
+            <label id="title" for="Nombre">Filtrar un Conjunto:</label>
+            <p id="title">Numeros: 1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10</p>
+            <label  for="Nombre">Ingresa un numero, solo se mostraran los numeros mayores o iguales a el numero ingresado: </label>
+            <input type="text" id="Filtrar" placeholder="Solo se mostrararn los numeros mayores a...">
+            <button class="Vistabtn" id="FiltrarButton">Calcular...</button>
+            <p id="FiltrarResult"></p>
+            
+        </div>
+
+        <div class="Vista sumar">
+                
+            <label id="title" for="Nombre">Sumar: </label>
+            <p >Ingresa un conjunto de numeros para sumarlos</p>
+            <input type="text" id="Sumar" placeholder="Ingrese una serie de numeros...">
+            <button class="Vistabtn" id="SumarButton">Calcular...</button>
+            <p id="SumaResult"></p>
+
+        </div>
+
+       </section>
+
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>
